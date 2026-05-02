@@ -42,3 +42,11 @@ ORDER BY Sponsor_name ASC;
 SELECT * 
 FROM Social_Media_Post_ 
 WHERE Like_count > 30000;
+
+--11. Call the Funcation
+SELECT GetTreeCount();
+
+--12. Call Procedure
+CALL GetVolunteerCount();
+
+--13.Call a Trigger
