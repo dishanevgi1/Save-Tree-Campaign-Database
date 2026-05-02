@@ -1,0 +1,9 @@
+CREATE OR REPLACE TRIGGER check_tree_age
+BEFORE INSERT ON Trees_
+FOR EACH ROW
+BEGIN
+    IF :NEW.Age < 0 THEN
+        RAISE_APPLICATION_ERROR(-20001,'Invalid Tree Age');
+    END IF;
+END;
+/
