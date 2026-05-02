@@ -43,10 +43,11 @@ SELECT *
 FROM Social_Media_Post_ 
 WHERE Like_count > 30000;
 
---11. Call the Funcation
-SELECT GetTreeCount();
+-- 11. Call the Function
+SELECT GetTreeCount() AS Total_Trees;
 
---12. Call Procedure
+-- 12. Call the Procedure
 CALL GetVolunteerCount();
 
---13.Call a Trigger
+-- 13. Test the Trigger
+INSERT INTO Trees_ VALUES ('T999','Test Location',-5,'Test','Healthy');
