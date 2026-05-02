@@ -1,7 +1,12 @@
-CREATE OR REPLACE PROCEDURE GetVolunteerCount AS
-    total NUMBER;
+DELIMITER $$
+
+CREATE PROCEDURE GetVolunteerCount()
 BEGIN
+    DECLARE total INT;
+
     SELECT COUNT(*) INTO total FROM Volunteers_;
-    DBMS_OUTPUT.PUT_LINE('Total Volunteers: ' || total);
-END;
-/
+
+    SELECT CONCAT('Total Volunteers: ', total) AS Result;
+END$$
+
+DELIMITER ;
