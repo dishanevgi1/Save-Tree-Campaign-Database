@@ -1,0 +1,7 @@
+CREATE OR REPLACE FUNCTION GetTreeCount RETURN NUMBER IS
+    total NUMBER;
+BEGIN
+    SELECT COUNT(*) INTO total FROM Trees_;
+    RETURN total;
+END;
+/
